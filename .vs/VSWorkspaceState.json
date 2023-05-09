@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EMS.business",
+    "\\EMS.business\\Abstract",
+    "\\EMS.business\\obj",
+    "\\EMS.business\\obj\\Release",
+    "\\EMS.data\\Abstract",
+    "\\EMS.data\\Concrete",
+    "\\EMS.data\\Concrete\\EFCore",
+    "\\EMS.data\\Migrations",
+    "\\EMS.entity"
+  ],
+  "SelectedNode": "\\EMS.business\\obj\\project.nuget.cache",
+  "PreviewInSolutionExplorer": false
+}

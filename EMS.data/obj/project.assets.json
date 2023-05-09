@@ -1,0 +1,85 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "EMS.entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EMS.entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EMS.entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EMS.entity/1.0.0": {
+      "type": "project",
+      "path": "../EMS.entity/EMS.entity.csproj",
+      "msbuildProject": "../EMS.entity/EMS.entity.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "EMS.entity >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Kübra Nur Ceviz\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\mina\\EmployeeManagmentSystem\\EMS.data\\EMS.data.csproj",
+      "projectName": "EMS.data",
+      "projectPath": "C:\\mina\\EmployeeManagmentSystem\\EMS.data\\EMS.data.csproj",
+      "packagesPath": "C:\\Users\\Kübra Nur Ceviz\\.nuget\\packages\\",
+      "outputPath": "C:\\mina\\EmployeeManagmentSystem\\EMS.data\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Kübra Nur Ceviz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\mina\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj": {
+              "projectPath": "C:\\mina\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
