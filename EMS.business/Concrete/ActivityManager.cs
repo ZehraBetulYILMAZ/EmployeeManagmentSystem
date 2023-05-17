@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EMS.business.Abstract;
+using EMS.data.Abstract;
+using EMS.entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +26,7 @@ namespace EMS.business.Concrete
              }
              return false;
          }*/
-        public void Create(Employee entity)
+        public void Create(Activity entity)
         {
             _activityRepository.Create(entity);
         }

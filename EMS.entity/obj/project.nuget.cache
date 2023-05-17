@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FaFlq+JU2BzSW6gH+Y1Ckdz/hxtVaecqPN48zEU+aDIw0LKvMjbYCo2GheR0nCBBG8VfBZaFAe78zEcXy8ZteQ==",
+  "dgSpecHash": "xL0Tyzi6+fI99i36ynYdb0v5TL2bG6Ao7uGtdN61jl+dewgu4MojXb33XzKeK940OCp2YGprG/nClBpoyDttdw==",
   "success": true,
-  "projectFilePath": "C:\\mina\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\redli\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\redli\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\redli\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

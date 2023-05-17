@@ -1,0 +1,30 @@
+﻿<h1 class="header">Employee Management System - Events</h1>
+
+<form id="eventForm">
+    <label for="eventName">Event Name:</label>
+    <input type="text" id="eventName" required />
+    <label for="eventDate">Event Date:</label>
+    <input type="date" id="eventDate" required />
+    <label for="eventType">Event Type:</label>
+    <select id="eventType" required>
+        <option value="Meeting">Meeting</option>
+        <option value="Conference">Conference</option>
+        <option value="Birthday">Birthday</option>
+    </select>
+    <label for="eventInfo">Event Info:</label>
+    <textarea id="eventInfo"></textarea>
+    <input type="submit" value="Create Event" onclick="addEvent()" />
+</form>
+
+<table id="eventList">
+    <tr>
+        <th>Event Name</th>
+        <th>Event Date</th>
+        <th>Event Type</th>
+        <th>Event Info</th>
+        <th>Attendees</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<script src="~/js/events.js"></script>

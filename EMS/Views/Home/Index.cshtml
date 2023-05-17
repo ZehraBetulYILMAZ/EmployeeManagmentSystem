@@ -1,1 +1,14 @@
-﻿MERHABA DÜNYA
+﻿<div id="loginForm">
+    <h2>Admin/Employee Login</h2>
+
+    <form action="admin/index" method="POST">
+    <label for="username">Username:</label>
+        <input type="text" asp-for="username" id="username" required />
+    <label for="password">Password:</label>
+    <input type="password" asp-for="password" id="password" required />
+    <button type="submit" onclick="login()">Login</button>
+    </form>
+    
+    <script src="~/js/login.js"></script>
+      
+    

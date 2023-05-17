@@ -16,46 +16,31 @@ namespace EMS.business.Concrete
         {
             _taskRepository = taskRepository;
         }
-        public void Create(Task entity)
+
+        public void Create(TaskEmployee entity)
         {
-            _taskRepository.Create(entity);
+            throw new NotImplementedException();
         }
 
-        public void Delete(Task entity)
+        public void Delete(TaskEmployee entity)
         {
-            _taskRepository.Create(entity);
+            throw new NotImplementedException();
         }
 
-        public List<Task> GetAll()
+        public List<TaskEmployee> GetAll()
         {
-            return _taskRepository.GetAll();
+            throw new NotImplementedException();
         }
 
-
-        public Task GetById(int id)
+        public TaskEmployee GetById(int id)
         {
-            return _taskRepository.GetById(id);
+            throw new NotImplementedException();
         }
 
-        public Task GetByIdWithDepartments(int id)
+        public void Update(TaskEmployee entity)
         {
-            return _taskRepository.GetByIdWithDepartments(id);
+            throw new NotImplementedException();
         }
-
-        List<Task> ITaskService.GetTasksByDepartments(int departmentId)
-        {
-            return _taskRepository.GetTasksByDepartments(departmentId);
-        }
-        List<Task> ITaskService.GetSearchResult(string searchString)
-        {
-            return _taskRepository.GetSearchResult(searchString);
-        }
-
-        public void Update(Task entity)
-        {
-            _taskRepository.Create(entity); ;
-        }
-
     }
 }
 

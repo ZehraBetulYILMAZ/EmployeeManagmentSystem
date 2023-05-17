@@ -7,6 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Admin\CreateEvent.cshtml" />
+    <None Include="Views\Admin\CreatePayroll.cshtml" />
+    <None Include="Views\Admin\Index.cshtml" />
+    <None Include="Views\Admin\NewEmployee.cshtml" />
+    <None Include="Views\Admin\ViewEmployees.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="wwwroot\js\employee.js" />
+    <None Include="wwwroot\js\events.js" />
+    <None Include="wwwroot\js\newEmployee.js" />
+    <None Include="wwwroot\js\payroll.js" />
+    <None Include="wwwroot\js\profileDetails.js" />
+    <None Include="wwwroot\js\viewEmployee.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.14">
@@ -17,12 +39,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\EMS.business\EMS.business.csproj" />
+    <ProjectReference Include="..\EMS.data\EMS.data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EMS.business\EMS.business.csproj" />
-    <ProjectReference Include="..\EMS.data\EMS.data.csproj" />
+    <Folder Include="wwwroot\files\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>

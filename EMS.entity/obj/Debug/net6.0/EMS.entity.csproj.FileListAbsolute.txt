@@ -22,3 +22,15 @@ C:\mina\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.dll
 C:\mina\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\refint\EMS.entity.dll
 C:\mina\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.pdb
 C:\mina\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\ref\EMS.entity.dll
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\bin\Debug\net6.0\EMS.entity.deps.json
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\bin\Debug\net6.0\EMS.entity.dll
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\bin\Debug\net6.0\EMS.entity.pdb
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.csproj.AssemblyReference.cache
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.AssemblyInfoInputs.cache
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.AssemblyInfo.cs
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.csproj.CoreCompileInputs.cache
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.dll
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\refint\EMS.entity.dll
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.pdb
+D:\ManagmentSystem\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\ref\EMS.entity.dll

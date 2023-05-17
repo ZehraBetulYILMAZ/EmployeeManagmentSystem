@@ -1,4 +1,5 @@
 ﻿using EMS.business.Abstract;
+using EMS.entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMS.WebUI.Controllers
@@ -10,9 +11,18 @@ namespace EMS.WebUI.Controllers
         {
             this.employeeService = employeeService;
         }
+
+        
         public IActionResult Index()
         {
-            return View();
+            Employee employee =employeeService.GetById(1);
+            return View(employee);
+        }
+        [HttpPost]
+        public IActionResult Index(string username, string password)
+        {
+            Employee employee = employeeService.GetById(1);
+            return RedirectToPage("Admin");
         }
     }
 }

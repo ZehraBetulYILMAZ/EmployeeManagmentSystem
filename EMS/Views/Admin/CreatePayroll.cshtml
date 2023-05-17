@@ -1,0 +1,30 @@
+﻿<h1 class="header">Employee Management System - Payroll</h1>
+
+<form id="payrollForm">
+    <label for="employeeId">Employee ID:</label>
+    <input type="text" id="employeeId" required />
+    <label for="grossSalary">Gross Salary:</label>
+    <input type="number" id="grossSalary" required />
+    <label for="sgkPremium">SGK Premium:</label>
+    <input type="number" id="sgkPremium" required />
+    <label for="stampTax">Stamp Tax:</label>
+    <input type="number" id="stampTax" required />
+    <label for="muhtasarTax">Muhtasar Tax:</label>
+    <input type="number" id="muhtasarTax" required />
+    <input type="submit" value="Add Payroll" onclick="addPayroll()" />
+</form>
+
+<table id="payrollList">
+    <tr>
+        <th>Employee ID</th>
+        <th>Gross Salary</th>
+        <th>SGK Premium</th>
+        <th>Stamp Tax</th>
+        <th>Muhtasar Tax</th>
+        <th>Deductions Total</th>
+        <th>Net Salary</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<script src="~/js/payroll.js"></script>

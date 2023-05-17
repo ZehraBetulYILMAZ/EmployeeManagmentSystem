@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
+      "PackagePath": "staticwebassets\\js\\employee.js"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\events.js",
+      "PackagePath": "staticwebassets\\js\\events.js"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\newEmployee.js",
+      "PackagePath": "staticwebassets\\js\\newEmployee.js"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\payroll.js",
+      "PackagePath": "staticwebassets\\js\\payroll.js"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\profileDetails.js",
+      "PackagePath": "staticwebassets\\js\\profileDetails.js"
+    },
+    {
+      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEmployee.js",
+      "PackagePath": "staticwebassets\\js\\viewEmployee.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EMS.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.EMS.WebUI.props",
+      "PackagePath": "build\\EMS.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.EMS.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\EMS.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.EMS.WebUI.props",
+      "PackagePath": "buildTransitive\\EMS.WebUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
