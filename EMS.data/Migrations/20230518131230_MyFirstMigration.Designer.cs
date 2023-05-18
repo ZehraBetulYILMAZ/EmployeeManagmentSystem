@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EMS.data.Migrations
 {
     [DbContext(typeof(EMSDemoContext))]
-    [Migration("20230509095634_MyFirstMigration")]
+    [Migration("20230518131230_MyFirstMigration")]
     partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,22 +28,22 @@ namespace EMS.data.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<DateTime>("dateOfPosting")
+                    b.Property<string>("activityType")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("dateOfPosting")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("isActive")
                         .HasColumnType("boolean");
 
                     b.Property<string>("status")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -74,7 +74,6 @@ namespace EMS.data.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("departmentId");
@@ -89,29 +88,31 @@ namespace EMS.data.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("DepartmentId")
+                    b.Property<int?>("DepartmentId")
                         .HasColumnType("integer");
 
                     b.Property<string>("adress")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("birthday")
+                    b.Property<DateTime?>("birthday")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<bool>("gender")
+                    b.Property<bool?>("gender")
                         .HasColumnType("boolean");
 
                     b.Property<string>("identificationNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("name")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("offerLetterPath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("promotionLetterPath")
                         .HasColumnType("text");
 
                     b.Property<string>("surname")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -174,7 +175,6 @@ namespace EMS.data.Migrations
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("isActive")
@@ -218,9 +218,7 @@ namespace EMS.data.Migrations
                 {
                     b.HasOne("EMS.entity.Department", "Department")
                         .WithMany("Employees")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DepartmentId");
 
                     b.Navigation("Department");
                 });
@@ -261,8 +259,7 @@ namespace EMS.data.Migrations
                 {
                     b.Navigation("ActivityEmployees");
 
-                    b.Navigation("Payroll")
-                        .IsRequired();
+                    b.Navigation("Payroll");
 
                     b.Navigation("tasks");
                 });

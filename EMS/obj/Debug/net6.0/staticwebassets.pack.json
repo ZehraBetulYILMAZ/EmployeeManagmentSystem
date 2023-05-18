@@ -1,35 +1,35 @@
 {
   "Files": [
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\css\\styles.css",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
       "PackagePath": "staticwebassets\\js\\employee.js"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\events.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\events.js",
       "PackagePath": "staticwebassets\\js\\events.js"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\login.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\login.js",
       "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\newEmployee.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\newEmployee.js",
       "PackagePath": "staticwebassets\\js\\newEmployee.js"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\payroll.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\payroll.js",
       "PackagePath": "staticwebassets\\js\\payroll.js"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\profileDetails.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\profileDetails.js",
       "PackagePath": "staticwebassets\\js\\profileDetails.js"
     },
     {
-      "Id": "D:\\ManagmentSystem\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEmployee.js",
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEmployee.js",
       "PackagePath": "staticwebassets\\js\\viewEmployee.js"
     },
     {

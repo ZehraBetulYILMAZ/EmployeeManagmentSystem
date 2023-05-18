@@ -19,8 +19,11 @@ namespace EMS.WebUI
         {
             services.AddScoped<IEmployeeRepository,EfCoreEmployeeRepository>(); 
             services.AddScoped<IEmployeeService,EmployeeManager>(); 
+            services.AddScoped<IActivityRepository, EfCoreActivityRepository>();
+            services.AddScoped<IActivityService, ActivityManager>();
             services.AddControllersWithViews();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

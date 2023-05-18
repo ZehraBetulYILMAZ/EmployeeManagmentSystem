@@ -14,10 +14,11 @@ namespace EMS.data.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    title = table.Column<string>(type: "text", nullable: false),
-                    description = table.Column<string>(type: "text", nullable: false),
-                    dateOfPosting = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    status = table.Column<string>(type: "text", nullable: false),
+                    title = table.Column<string>(type: "text", nullable: true),
+                    activityType = table.Column<string>(type: "text", nullable: true),
+                    description = table.Column<string>(type: "text", nullable: true),
+                    dateOfPosting = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    status = table.Column<string>(type: "text", nullable: true),
                     isActive = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
@@ -31,7 +32,7 @@ namespace EMS.data.Migrations
                 {
                     departmentId = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    name = table.Column<string>(type: "text", nullable: false)
+                    name = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,13 +45,15 @@ namespace EMS.data.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    identificationNumber = table.Column<string>(type: "text", nullable: false),
-                    name = table.Column<string>(type: "text", nullable: false),
-                    surname = table.Column<string>(type: "text", nullable: false),
-                    birthday = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    gender = table.Column<bool>(type: "boolean", nullable: false),
-                    adress = table.Column<string>(type: "text", nullable: false),
-                    DepartmentId = table.Column<int>(type: "integer", nullable: false)
+                    identificationNumber = table.Column<string>(type: "text", nullable: true),
+                    name = table.Column<string>(type: "text", nullable: true),
+                    surname = table.Column<string>(type: "text", nullable: true),
+                    birthday = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    gender = table.Column<bool>(type: "boolean", nullable: true),
+                    adress = table.Column<string>(type: "text", nullable: true),
+                    offerLetterPath = table.Column<string>(type: "text", nullable: true),
+                    promotionLetterPath = table.Column<string>(type: "text", nullable: true),
+                    DepartmentId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -60,7 +63,7 @@ namespace EMS.data.Migrations
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
                         principalColumn: "departmentId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -119,7 +122,7 @@ namespace EMS.data.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
-                    description = table.Column<string>(type: "text", nullable: false),
+                    description = table.Column<string>(type: "text", nullable: true),
                     dateOfPosting = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     dateOfHanding = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     status = table.Column<string>(type: "text", nullable: false),
