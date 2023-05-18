@@ -8,7 +8,8 @@ namespace EMS.WebUI.Controllers
         {
             return View();
         }
-        public IActionResult CreateEvent()
+        [HttpPost]
+        public IActionResult CreateEvent(string eventName)
         {
             return View();
         }

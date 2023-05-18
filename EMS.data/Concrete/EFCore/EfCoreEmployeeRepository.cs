@@ -24,7 +24,15 @@ namespace EMS.data.Concrete.EFCore
 
         public List<Employee> GetSearchResult(string searchString)
         {
-            throw new NotImplementedException();
+            using (var context = new EMSDemoContext())
+            {
+                var employees = context
+                    .Employees
+                    .Where(i => i.name.Contains(searchString))
+                    .AsQueryable();
+
+                return employees.ToList();
+            }
         }
     }
 }
