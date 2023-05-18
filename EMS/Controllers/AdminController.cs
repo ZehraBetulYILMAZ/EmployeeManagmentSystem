@@ -1,5 +1,6 @@
 ﻿using EMS.business.Abstract;
 using EMS.entity;
+using EMS.WebUI.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMS.WebUI.Controllers
@@ -41,18 +42,30 @@ namespace EMS.WebUI.Controllers
         }
         public IActionResult ViewEmployees()
         {
-            return View();
+          List<Employee> employees = employeeService.GetAll();
+          List<EmployeeModel> models = new List<EmployeeModel>();
+            foreach (var item in employees)
+            {
+              EmployeeModel employeeModel = new EmployeeModel();
+                employeeModel.idNumber = item.identificationNumber;
+                employeeModel.firstName = item.name;
+                employeeModel.lastName = item.surname;
+                employeeModel.birthDate = item.birthday;
+                employeeModel.address = item.adress;
+                models.Add(employeeModel);
+            }
+            return View(models);
         }
         [HttpPost]
-        public IActionResult NewEmployee(string idNumber, string firstName, string lastName, DateTime birthDate, string address)
+        public IActionResult NewEmployee(EmployeeModel e)
         {
             Employee employee = new Employee()
             {
-                identificationNumber = idNumber,
-                name = firstName,
-                surname = lastName,
-                birthday = birthDate,
-                adress = address
+                identificationNumber = e.idNumber,
+                name = e.firstName,
+                surname = e.lastName,
+                birthday = e.birthDate,
+                adress = e.address
             };
             employeeService.Create(employee);
             return View();
