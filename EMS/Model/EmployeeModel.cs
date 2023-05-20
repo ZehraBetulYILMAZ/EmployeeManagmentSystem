@@ -10,6 +10,10 @@ namespace EMS.WebUI.Model
         public DateTime? birthDate { get; set; }
         public string address { get; set; }
 
+        public string department { get; set; }
+
+        public string gender { get; set; }
+
 
 
     }

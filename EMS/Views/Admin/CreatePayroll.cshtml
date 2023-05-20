@@ -1,31 +1,44 @@
-﻿<h1 class="header">Employee Management System - Payroll</h1>
-
-<form id="payrollForm">
-    <label for="employeeId">Employee ID:</label>
-    <input type="text" id="employeeId" required />
-    <label for="grossSalary">Gross Salary:</label>
-    <input type="number" id="grossSalary" required />
-    <label for="sgkPremium">SGK Premium:</label>
-    <input type="number" id="sgkPremium" required />
-    <label for="stampTax">Stamp Tax:</label>
-    <input type="number" id="stampTax" required />
-    <label for="muhtasarTax">Muhtasar Tax:</label>
-    <input type="number" id="muhtasarTax" required />
-    <input type="submit" value="Add Payroll" onclick="addPayroll()" />
+﻿<form class="m-6">
+    <div class="m-3">
+        <label for="email" class="form-label  ">Email</label>
+        <input type="email" name="name" id="name" class="form-control">
+    </div>
+    <div class="m-3">
+        <label for="password" class="form-label ">Password</label>
+        <input type="password" name="password" id="password" class="form-control form-control-sm">
+    </div>
+    <div class="m-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea name="address" id="address" class="form-control form-control-lg"></textarea>
+    </div>
 </form>
 
-<table id="payrollList">
-    <tr>
-        <th>Employee ID</th>
-        <th>Gross Salary</th>
-        <th>SGK Premium</th>
-        <th>Stamp Tax</th>
-        <th>Muhtasar Tax</th>
-        <th>Deductions Total</th>
-        <th>Net Salary</th>
-        <th>Action</th>
-    </tr>
-    <tr><td>1</td><td>20</td><td>1</td><td>1</td><td>1</td><td>3</td><td>17</td><td><button class="delete-button" onclick="deletePayroll(this)">Delete</button></td></tr>
+<table class="table m-3">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>twitter</td>
+        </tr>
+    </tbody>
 </table>
-
-<script src="~/js/payroll.js"></script>

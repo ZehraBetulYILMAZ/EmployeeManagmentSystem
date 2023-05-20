@@ -1,36 +1,40 @@
 ﻿@model EmployeeModel
-
-<h1 class="header">Employee Management System - New Employee</h1>
-
-<form asp-controller="Admin" asp-action="NewEmployee" method="post">
-    <div class="form-group">
-        <label for="idnumber">Id Number:</label>
-        <input type="text" id="idnumber" name="idNumber" required />
+<form class="w-50" asp-controller="Admin" asp-action="NewEmployee" method="post">
+    <div class="mb-3" >
+        <label for="firstName" class="form-label  d-flex">First Name</label>
+        <input type="firstName" name="firstName" id="firstName" class="form-control">
     </div>
-
-    <div class="form-group">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required />
+    <div class="mb-3">
+        <label for="lastName" class="form-label  d-flex">Last Name</label>
+        <input type="lastName" name="lastName" id="lastName" class="form-control form-control-sm">
     </div>
-
-    <div class="form-group">
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required />
+    <div class="mb-3">
+        <label for="address" class="form-label  d-flex">Address</label>
+        <textarea name="address" id="address" class="form-control form-control-lg"></textarea>
     </div>
-
-    <div class="form-group">
-        <label for="birthDate">Birth Date:</label>
-        <input type="date" id="birthDate" name="birthDate" required />
+    <div class="mb-3">
+        <label for="birthDate" class="form-label  d-flex">Birth Date</label>
+        <input type="birthDate" id="birthDate" name="birthDate" required />
     </div>
-
-    <div class="form-group">
-        <label for="Address">Address:</label>
-        <input type="text" id="Address" name="address" required />
+    <div class="mb-3">
+        <label for="file" class="form-label  d-flex">File Upload</label>
+        <input type="file" name="file" id="file" class="form-control ">
     </div>
-
-   
-
-    <button type="submit">Add Employee</button>
+    <div class="mb-3">
+        <label for="department" class="form-label  d-flex">Department</label>
+        <select name="department" id="department" class="form-select">
+            <option value="0">accounting</option>
+            <option value="1">finance</option>
+            <option value="2">marketing</option>
+            <option value="3">sales</option>
+            <option value="4">human resources</option>
+            <option value="5">no department</option>
+            <option value="6">r&d</option>
+        </select>
+    </div>
+    <div class="form-check mb-3">
+        <input type="checkbox" name="gender" id="gender" class="form-check-input">
+        <label for="gender" class="form-check-label  d-flex">Gender</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-<script src="~/js/newEmployee.js"></script>

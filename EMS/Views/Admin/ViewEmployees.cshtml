@@ -1,40 +1,39 @@
 ﻿@model List<EmployeeModel>
-
+@section SectionMain
+{
+    @await Html.PartialAsync("_Main")
+}
+<div class="col-sm-9">
+    <main class="m-4">
+        <div class="container">
 <h1 class="header">Employee Management System - View Employees</h1>
 
-<table id="employeeTable">
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Net Salary</th>
-        <th>Assigned Task</th>
-        <th>Action</th>
-    </tr>
- 
-    @foreach (var item in @Model)
-    {
-        <tr data-id="1">
-            <td>@item.firstName</td>
-            <td>@item.lastName</td>
-            <td contenteditable="true">@item.idNumber</td>
-            <td contenteditable="true">@item.address</td>
-            <td>
-                <button data-id="1" class="delete-button">Delete</button>
-                <button data-id="1" class="view-button">View</button>
-            </td>
-             <td>
-            </td>
-         </tr>
-      @*  <div class="custom-control custom-checkbox">
-            <input type="checkbox"
-                   class="custom-control-input"
-                   name="selectedRoles"
-                   value="@rolename"
-                   id="@rolename"
-            @(Model.SelectedRoles.Any(i => i == rolename) ? "checked" : "")>
-            <label class="custom-control-label" for="@rolename">@rolename</label>
-        </div>*@
-    }
-</table>
-
-<script src="~/js/viewEmployee.js"></script>
+        <table class="table m-3">
+            <thead>
+                <tr>
+                    <th scope="col">Employee Full Name</th>
+                    <th scope="col">Birthday</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @Model)
+              {
+                <tr>
+                    <td>@item.firstName @item.lastName</td>
+                    <td>@item.birthDate</td>
+                    <td>@item.gender</td>
+                    <td>@item.address</td>
+                    <td>@item.department</td>
+       
+                </tr>
+              }
+            </tbody>
+        </table>
+        </div>
+    </main>
+</div>
+          </div>
+ </section>
