@@ -1,18 +1,24 @@
 ﻿using EMS.business.Abstract;
 using EMS.entity;
+using EMS.WebUI.Identity;
 using EMS.WebUI.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 
 namespace EMS.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
+        private UserManager<User> _userManager;
         private IEmployeeService employeeService;
         private IActivityService activityService;
-        public AdminController(IEmployeeService employeeService, IActivityService activityService)
+        public AdminController(IEmployeeService employeeService, IActivityService activityService, UserManager<User> userManager)
         {
             this.employeeService = employeeService;
             this.activityService = activityService;
+            this._userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -57,7 +63,7 @@ namespace EMS.WebUI.Controllers
             return View(models);
         }
         [HttpPost]
-        public IActionResult NewEmployee(EmployeeModel e)
+        public async Task<IActionResult> NewEmployee(EmployeeModel e)
         {
             Employee employee = new Employee()
             {
@@ -68,6 +74,19 @@ namespace EMS.WebUI.Controllers
                 adress = e.address
             };
             employeeService.Create(employee);
+            var user = new User()
+            {
+              Email = employee.adress,
+              identificationNumber = employee.identificationNumber,
+              UserName = employee.name + employee.surname
+            };
+            var result = await _userManager.CreateAsync(user, "N8hZ4V9#%g0u");
+            if (result.Succeeded)
+            {
+                // generate token
+                // email
+                return RedirectToAction("Login", "Account");
+            }
             return View();
         }
         public IActionResult NewEmployee()

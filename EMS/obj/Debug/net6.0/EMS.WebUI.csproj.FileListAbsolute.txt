@@ -105,7 +105,6 @@ C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\EMS.WebUI.pdb
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Humanizer.dll
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -144,3 +143,19 @@ C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\obj\Debug\net6
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\obj\Debug\net6.0\EMS.WebUI.pdb
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\obj\Debug\net6.0\EMS.WebUI.genruntimeconfig.cache
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\obj\Debug\net6.0\ref\EMS.WebUI.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
