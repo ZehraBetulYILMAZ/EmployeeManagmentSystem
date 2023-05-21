@@ -17,5 +17,7 @@ namespace EMS.business.Abstract
         Employee GetByIdWithDepartments(int id);
         List<Employee> GetEmployeesByDepartments(int departmentId);
         List<Employee> GetSearchResult(string searchString);
+
+        Employee GetIdNumber(string idNumber);
     }
 }

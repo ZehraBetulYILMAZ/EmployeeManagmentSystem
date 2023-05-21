@@ -12,3 +12,26 @@
 .navbar {
     background-color: #46B5D1;
 }
+.img {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.login {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image:url('../img/pexels-scott-webb-27406.jpg');
+    width: 100%;
+    height: 100%;
+}

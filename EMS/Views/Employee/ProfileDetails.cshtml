@@ -1,0 +1,60 @@
+﻿@model EmployeeModel
+<h1 class="header">Employee Profile Details</h1>
+<table id="profile-table" class="table m-3">
+    <thead>
+        <tr>
+            <th scope ="col">Field</th>
+            <th scope ="col">Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Identification Number</td>
+            <td id="identification-number">@Model.idNumber</td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td id="first-name">@Model.firstName</td>
+            
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td id="last-name">@Model.lastName</td>
+        </tr>
+        <tr>
+            <td>Birthdate</td>
+            <td id="birthdate">@Model.birthDate</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td id="address">@Model.address</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td id="gender">@Model.gender</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td id="department">@Model.department</td>
+        </tr>
+       @* <tr>
+            <td>Assigned Task</td>
+            <td id="assigned-task"></td>
+        </tr>*@
+        @*<tr>
+            <td>Task Status</td>
+            <td>
+                <select id="task-status" onchange="changeTaskStatus()">
+                    <option value="Not Done">Not Done</option>
+                    <option value="On Progress">On Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </td>
+        </tr>*@
+    </tbody>
+</table>
+<a id="back-button"
+   href="employee.html
+    ">Go Back</a>
+
+<script src="~/js/profileDetails.js"></script>

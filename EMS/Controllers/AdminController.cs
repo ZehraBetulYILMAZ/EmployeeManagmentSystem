@@ -5,6 +5,7 @@ using EMS.WebUI.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using System.Diagnostics;
 
 namespace EMS.WebUI.Controllers
 {
@@ -14,28 +15,18 @@ namespace EMS.WebUI.Controllers
         private UserManager<User> _userManager;
         private IEmployeeService employeeService;
         private IActivityService activityService;
-        public AdminController(IEmployeeService employeeService, IActivityService activityService, UserManager<User> userManager)
+        private IPayrollService payrollService;
+        public AdminController(IEmployeeService employeeService, IActivityService activityService, UserManager<User> userManager, IPayrollService payrollService)
         {
             this.employeeService = employeeService;
             this.activityService = activityService;
             this._userManager = userManager;
+            this.payrollService = payrollService;
         }
+        
+        
         public IActionResult Index()
         {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult CreateEvent(string eventName, DateTime eventDate, string type, string info)
-        {
-            Activity activity = new Activity()
-            {
-                title = eventName,
-                dateOfPosting = eventDate,
-                activityType = type,
-                description = info,
-                isActive = true
-            };
-            activityService.Create(activity);
             return View();
         }
         public IActionResult CreateEvent()
@@ -46,6 +37,35 @@ namespace EMS.WebUI.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult CreatePayroll(PayrollModel p)
+        {
+            Employee employee = employeeService.GetIdNumber(p.idNumber);
+            Payroll payroll = new Payroll();
+            payroll.brutMaas = p.GrossSalary;
+            payroll.sgkPrimi = p.GrossSalary * 0.14;
+            payroll.damgaVergisi = p.GrossSalary * 0.007;
+            payroll.muhtasarVergisi = (p.GrossSalary - payroll.sgkPrimi) * 0.15;
+            payroll.kesintilerToplamı = payroll.damgaVergisi + payroll.sgkPrimi;
+            payroll.netMaas = p.GrossSalary - payroll.kesintilerToplamı;
+            payroll.EmployeeId = employee.Id;
+            payrollService.Create(payroll);
+            p = new PayrollModel
+            {
+                employeeId = employee.Id,
+                GrossSalary = payroll.brutMaas,
+                SGKPremium = payroll.sgkPrimi,
+                StampTax = payroll.damgaVergisi,
+                MuhtasarTax = payroll.muhtasarVergisi,
+                DeductionsTotal = payroll.kesintilerToplamı,
+                NetSalary = payroll.netMaas,
+                name = employee.name,
+                surname = employee.surname
+            };
+            return View(p);
+        }
+
         public IActionResult ViewEmployees()
         {
           List<Employee> employees = employeeService.GetAll();
@@ -91,6 +111,37 @@ namespace EMS.WebUI.Controllers
         }
         public IActionResult NewEmployee()
         {
+            return View();
+        }
+
+        public IActionResult ViewEvent()
+        {
+            List<entity.Activity> activity = activityService.GetAll();
+            List<ActivityModel> models = new List<ActivityModel>();
+            foreach (var item in activity)
+            {
+                ActivityModel activityModel = new ActivityModel();
+                activityModel.type = item.activityType;
+                activityModel.eventName = item.title;
+                activityModel.info = item.description;
+                activityModel.eventDate = item.dateOfPosting;
+                // activityModel.isActive= item.isActive;
+                models.Add(activityModel);
+            }
+            return View(models);
+        }
+
+        [HttpPost]
+        public IActionResult CreateEvent(ActivityModel a)
+        {
+            entity.Activity activity = new entity.Activity()
+            {
+                activityType = a.type,
+                title = a.eventName,
+                description = a.info,
+                dateOfPosting = a.eventDate,
+            };
+            activityService.Create(activity);
             return View();
         }
 

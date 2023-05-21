@@ -34,5 +34,16 @@ namespace EMS.data.Concrete.EFCore
                 return employees.ToList();
             }
         }
+        public Employee GetIdNumber(string idNumber)
+        {
+            using (var context = new EMSDemoContext())
+            {
+                var employee = context
+                    .Employees
+                    .First(i => i.identificationNumber == idNumber);
+
+                return employee;
+            }
+        }
     }
 }

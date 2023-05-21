@@ -1,0 +1,26 @@
+﻿@model List<ActivityModel>
+<table class="table m-3">
+    <thead>
+        <tr>
+            <th scope="col">Event Title</th>
+            <th scope="col">Event Date</th>
+            <th scope="col">Event Type</th>
+            <th scope="col">Event Info</th>
+            <th scope="col">Attendees</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.eventName</td>
+                <td>@item.eventDate</td>
+                <td>@item.type</td>
+                <td>@item.info</td>
+                <td>attendees</td>
+                <td>action</td>
+            </tr>
+        }
+    </tbody>
+</table>

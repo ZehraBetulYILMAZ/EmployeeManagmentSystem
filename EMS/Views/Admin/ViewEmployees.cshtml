@@ -1,39 +1,33 @@
 ﻿@model List<EmployeeModel>
-@section SectionMain
-{
-    @await Html.PartialAsync("_Main")
-}
-<div class="col-sm-9">
-    <main class="m-4">
-        <div class="container">
-<h1 class="header">Employee Management System - View Employees</h1>
+<section class="mt-2 ">
+    <div class="container text-center">
+        <div class="col-9 container ">
+            <h1 class="header">Employee Management System - View Employees</h1>
 
-        <table class="table m-3">
-            <thead>
-                <tr>
-                    <th scope="col">Employee Full Name</th>
-                    <th scope="col">Birthday</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Department</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in @Model)
-              {
-                <tr>
-                    <td>@item.firstName @item.lastName</td>
-                    <td>@item.birthDate</td>
-                    <td>@item.gender</td>
-                    <td>@item.address</td>
-                    <td>@item.department</td>
-       
-                </tr>
-              }
-            </tbody>
-        </table>
+            <table class="table m-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Full Name</th>
+                        <th scope="col">Birthday</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td>@item.firstName @item.lastName</td>
+                            <td>@item.birthDate</td>
+                            <td>@item.gender</td>
+                            <td>@item.address</td>
+                            <td>@item.department</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
-    </main>
-</div>
-          </div>
- </section>
+    </div>
+</section>

@@ -1,44 +1,52 @@
-﻿<form class="m-6">
-    <div class="m-3">
-        <label for="email" class="form-label  ">Email</label>
-        <input type="email" name="name" id="name" class="form-control">
-    </div>
-    <div class="m-3">
-        <label for="password" class="form-label ">Password</label>
-        <input type="password" name="password" id="password" class="form-control form-control-sm">
-    </div>
-    <div class="m-3">
-        <label for="address" class="form-label">Address</label>
-        <textarea name="address" id="address" class="form-control form-control-lg"></textarea>
-    </div>
-</form>
+﻿@model PayrollModel
+<section class="mt-2 ">
+    <div class="container text-center">
+        <div class="col-6 container ">
+            <h1 class="header">Employee Management System - Payroll</h1>
 
-<table class="table m-3">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>twitter</td>
-        </tr>
-    </tbody>
-</table>
+            <form asp-controller="Admin" asp-action="CreatePayroll" method="post" id="payrollForm">
+                <div class="m-3">
+                    <label for="employeeId" class="form-label">Employee ID:</label>
+                    <input type="text" name="idNumber" id="employeeId" class="form-control" required />
+                </div>
+                <div class="m-3">
+                    <label for="grossSalary" class="form-label">Gross Salary:</label>
+                </div>
+                <input type="number" name="GrossSalary" id="grossSalary" class="form-control" required />
+
+                <input type="submit" value="Add Payroll" class="form-control" onclick="addPayroll()" />
+            </form>
+
+            <table id="payrollList" class="table m-3">
+                <tr>
+                    <th scope ="col">Employee ID</th>
+                    <th scope ="col">Gross Salary</th>
+                    <th scope ="col">SGK Premium</th>
+                    <th scope ="col">Stamp Tax</th>
+                    <th scope ="col">Muhtasar Tax</th>
+                    <th scope ="col">Deductions Total</th>
+                    <th scope="col">Net Salary</th>
+                    <th scope="col">Action</th>
+                </tr>
+
+                @if (Model != null)
+                {
+                    <tr>
+                        <td>@Model.name @Model.surname</td>
+                        <td>@Model.GrossSalary</td>
+                        <td>@Model.SGKPremium</td>
+                        <td>@Model.StampTax</td>
+                        <td>@Model.MuhtasarTax</td>
+                        <td>@Model.DeductionsTotal</td>
+                        <td>@Model.NetSalary</td>
+                        <td>
+                            <button class="delete-button" onclick="deletePayroll(this)">Delete</button>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</section>
+<script src="~/js/payroll.js"></script>

@@ -55,6 +55,10 @@ namespace EMS.business.Concrete
         {
             _employeeRepository.Create(entity); ;
         }
+        public Employee GetIdNumber(string idNumber)
+        {
+            return _employeeRepository.GetIdNumber(idNumber);
+        }
 
     }
 }

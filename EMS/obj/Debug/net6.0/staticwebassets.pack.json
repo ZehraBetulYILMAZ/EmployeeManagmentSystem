@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-pixabay-269077.jpg",
+      "PackagePath": "staticwebassets\\img\\pexels-pixabay-269077.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-scott-webb-27406.jpg",
+      "PackagePath": "staticwebassets\\img\\pexels-scott-webb-27406.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg",
+      "PackagePath": "staticwebassets\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg"
+    },
+    {
       "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
       "PackagePath": "staticwebassets\\js\\employee.js"
     },

@@ -1,22 +1,39 @@
-function showProfileDetails() {
-  // Çalışan verilerini almak için AJAX isteği yapalım
+document.addEventListener('DOMContentLoaded', function () {
   fetch('employee.json')
     .then((response) => response.json())
     .then((data) => {
-      // İlgili çalışanın bilgilerini bulmak için örneğin bir id kullanabiliriz
-      const employeeId = 1; // Örnek olarak 1. çalışanın bilgilerini alalım
+      const employee = data.employees.find(
+        (emp) => emp.identificationNumber === '3216549870'
+      );
 
-      // Çalışanın bilgilerini bulalım
-      const employee = data.employees.find((emp) => emp.id === employeeId);
-
-      // Profil ayrıntılarını oluşturalım
-      const profileInfoDiv = document.getElementById('profileInfo');
-      profileInfoDiv.innerHTML = `
-        <p><strong>Name:</strong> ${employee.firstName} ${employee.lastName}</p>
-        <p><strong>Birthday:</strong> ${employee.birthday}</p>
-        <p><strong>Net Salary:</strong> ${employee.netSalary}</p>
-        <p><strong>Assigned Task:</strong> ${employee.assignedTask}</p>
-      `;
+      if (employee) {
+        document.getElementById('identification-number').innerText =
+          employee.identificationNumber;
+        document.getElementById('first-name').innerText = employee.firstName;
+        document.getElementById('last-name').innerText = employee.lastName;
+        document.getElementById('birthdate').innerText = employee.birthday;
+        document.getElementById('address').innerText = employee.address;
+        document.getElementById('gender').innerText = employee.gender;
+        document.getElementById('department').innerText = employee.department;
+        document.getElementById('assigned-task').innerText =
+          employee.assignedTask;
+        const taskStatus = document.getElementById('task-status');
+        taskStatus.value = employee.taskStatus;
+      }
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+      console.log('Error fetching employee data:', error);
+    });
+});
+
+function changeTaskStatus() {
+  const taskStatus = document.getElementById('task-status');
+  const selectedStatus = taskStatus.value;
+
+  if (selectedStatus === 'Not Done')
+    alert('Status Changed Succesfully to Not Done');
+  if (selectedStatus === 'On Progress')
+    alert('Status Changed Succesfully to On Progress');
+  if (selectedStatus === 'Completed')
+    alert('Status Changed Succesfully to Completed');
 }
