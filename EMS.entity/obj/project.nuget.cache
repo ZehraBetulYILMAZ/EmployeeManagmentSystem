@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "t21fetBY5ldPTUMmkxywKjgpRjQv0Mctv9F4QMShgnqVaurkUZI1yyWsdpfTUqU28z/Om372iMzwmvbYu1swNQ==",
+  "dgSpecHash": "QWLC8GxQd4KuQe7o7mtNqLUVJChBhDFTov3mhapTN6xKZOJBwWgDvSEEMOnW/hG6XuOS+mJwbxgDsh8yiT0LnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\managment\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\redli\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\redli\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\redli\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
