@@ -60,6 +60,8 @@ namespace EMS.WebUI
             services.AddScoped<IPayrollRepository, EfCorePayrollRepository>();
             services.AddScoped<IPayrollService, PayrollManager>();
             services.AddScoped<IActivityService, ActivityManager>();
+            services.AddScoped<ITaskRepository, EfCoreTaskRepository>();
+            services.AddScoped<ITaskService, TaskManager>();
             services.AddControllersWithViews();
         }
 
@@ -86,6 +88,7 @@ namespace EMS.WebUI
 
             app.UseEndpoints(endpoints =>
             {
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -93,6 +96,11 @@ namespace EMS.WebUI
                    name: "employeeprofile",
                    pattern: "employee/profile/details/{id?}",
                    defaults: new {controller="Employee",action="ProfileDetails"});
+                endpoints.MapControllerRoute(
+                    name: "employeeviewtask",
+                    pattern: "employee/viewtask/{id?}",
+                    defaults: new { controller = "Employee", action = "ViewTask" }
+                );
 
             });
          

@@ -16,5 +16,7 @@ namespace EMS.business.Abstract
 
         void Update(TaskEmployee entity);
         void Delete(TaskEmployee entity);
+
+        List<TaskEmployee> GetTasksWithEmployee(int EmployeeId);
     }
 }

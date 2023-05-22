@@ -1,0 +1,37 @@
+﻿@model TaskModel
+<section class="mt-5 container">
+
+    <div class="row">
+        <div class="col-3 ">
+            <h1 class="login text-center">İMAGE İMAGE İMAGE</h1>
+            <img src="../img/pexels-pixabay-269077.jpg" class="img" alt="...">
+
+        </div>
+        <div class="col-9">
+                <div class="card">
+                    <h5 class="card-header">Task</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.name</h5>
+                        <p class="card-text">@Model.description</p>
+                        <form asp-controller="Employee" asp-action="TaskStatus" method="post">
+                             <div class="mb-3">
+                        <label for="status" class="form-label  d-flex">Status</label>
+                        <select name="status" id="status" class="form-select">
+                        <option value="0">done</option>
+                        <option value="1">in progress</option>
+                        <option value="2">appointed</option>
+                        </select>
+                        </div>
+                            <div class="row">
+                                <div class="col-10">@Model.dateOfPosting</div>
+                                <input type="hidden" name="task" value="@Model.Id">
+                                <div class="col-2">  <button type="button" class="btn btn-dark">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+        </div>
+
+    </div>
+</section>

@@ -9,6 +9,6 @@ namespace EMS.data.Abstract
 {
     public interface ITaskRepository : IRepository<TaskEmployee>
     {
-        //ekstra??
+        List<TaskEmployee> GetTasksWithEmployee(int EmployeeId);
     }
 }

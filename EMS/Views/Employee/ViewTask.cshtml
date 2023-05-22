@@ -1,5 +1,5 @@
 ﻿
-
+@model List<TaskModel>
 <section class="mt-5 container">
 
     <div class="row">
@@ -9,27 +9,32 @@
 
         </div>
         <div class="col-9">
+            @foreach(var item in Model)
+            {
             <div class="card">
-                <h5 class="card-header">Featured</h5>
+                <h5 class="card-header">Task</h5>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <form>
-                        <div class="mb-3">
+                    <h5 class="card-title">@item.name</h5>
+                    <p class="card-text">@item.description</p>
+                        
+                       @* <div class="mb-3">
                             <label for="status" class="form-label  d-flex">Status</label>
                             <select name="status" id="status" class="form-select">
                                 <option value="0">done</option>
                                 <option value="1">in progress</option>
                                 <option value="2">appointed</option>
                             </select>
-                        </div>
+                        </div>*@
                         <div class="row">
-                            <div class="col-10"></div>
-                            <div class="col-2">  <button type="button" class="btn btn-dark">Submit</button></div>
+                            <div class="col-10">@item.dateOfPosting</div>
+                              @*  <input type="hidden" name="Id" value="@item.Id">*@
+                                <div class="col-2"> <a href="/Employee/TaskStatus/@item.Id"> <button type="button" class="btn btn-dark">Submit</button></a></div>
                         </div>
-                    </form>
+                   
                 </div>
             </div>
+            }
         </div>
+        
     </div>
 </section>

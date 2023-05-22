@@ -7,19 +7,21 @@ namespace EMS.WebUI.Controllers
 {
     public class EmployeeController : Controller
     {
+
         private IEmployeeService employeeService;
-        public EmployeeController(IEmployeeService employeeService)
+        private ITaskService taskService;
+        public EmployeeController(IEmployeeService employeeService, ITaskService taskService)
         {
             this.employeeService = employeeService;
+            this.taskService = taskService;
+
+
         }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult ViewTask()
-        {
-            return View();
-        }
+      
         public IActionResult EmployeeViewEvent()
         {
             return View();
@@ -36,6 +38,56 @@ namespace EMS.WebUI.Controllers
                 department = employee.name,
                 idNumber = employee.identificationNumber,
             };
+            return View(model);
+        }
+
+        public IActionResult ViewTask()
+        {
+            Employee employee = employeeService.GetById(1);
+            var tasks = taskService.GetTasksWithEmployee(employee.Id);
+            List<TaskModel> models = new List<TaskModel>();
+            foreach (var task in tasks)
+            {
+                TaskModel model = new TaskModel()
+                {
+                    Id = task.Id,
+                    name = task.name,
+                    description = task.name,
+                    dateOfPosting = task.dateOfPosting,
+                    status = task.status
+                };
+                models.Add(model);
+            }
+
+            return View(models);
+        }
+        public IActionResult TaskStatus(int id)
+        {
+            var task = taskService.GetById(id);
+            TaskModel model = new TaskModel() {
+                
+            name= task.name,
+            description= task.description,  
+            Id=task.Id,
+            dateOfPosting=task.dateOfPosting,   
+            EmployeeId=task.EmployeeId, 
+            };
+
+            return View(model);
+            
+        }
+        [HttpPost]
+        public IActionResult TaskStatus(TaskModel model)
+        {
+            var task = taskService.GetById(model.Id);
+
+            if (model.status != null)
+            {
+                task.status = model.status;
+            }
+            taskService.Update(task);
+
+
             return View(model);
         }
     }

@@ -8,13 +8,9 @@
 
   <ItemGroup>
     <Compile Remove="Models\**" />
-    <Compile Remove="wwwroot\files\**" />
     <Content Remove="Models\**" />
-    <Content Remove="wwwroot\files\**" />
     <EmbeddedResource Remove="Models\**" />
-    <EmbeddedResource Remove="wwwroot\files\**" />
     <None Remove="Models\**" />
-    <None Remove="wwwroot\files\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,6 +42,10 @@
   <ItemGroup>
     <ProjectReference Include="..\EMS.business\EMS.business.csproj" />
     <ProjectReference Include="..\EMS.data\EMS.data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\files\" />
   </ItemGroup>
 
 </Project>

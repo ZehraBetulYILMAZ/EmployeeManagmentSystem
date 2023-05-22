@@ -12,6 +12,17 @@ namespace EMS.data.Concrete.EFCore
     public class EfCoreTaskRepository :
        EfCoreGenericRepository<TaskEmployee, EMSDemoContext>, ITaskRepository
     {
-     
+        List<TaskEmployee> ITaskRepository.GetTasksWithEmployee(int EmployeeId)
+        {
+            using (var context = new EMSDemoContext())
+            {
+                var tasks = context
+                    .TaskEmployees
+                    .Where(i => i.EmployeeId == EmployeeId)
+                    .AsQueryable();
+
+                return tasks.ToList();
+            }
+        }
     }
 }

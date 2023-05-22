@@ -1,8 +1,8 @@
 ﻿
 <section class="mt-2 ">
-    <h1 class="header">Upload Letter</h1>
+  
     <div class="container text-center">
-    
+        <h1 class="header">Upload Letter</h1>
      <div class="col-6 container ">
          <form enctype="multipart/form-data" asp-controller="Admin" asp-action="UploadLetter" method="post">
           <div class="mb-3" >
@@ -12,8 +12,8 @@
                 <div class="mb-3">
                     <label for="fileType" class="form-label  d-flex">Type</label>
                     <select name="fileType" id="fileType" class="form-select">
-                        <option value="0">done</option>
-                        <option value="1">in progress</option>
+                        <option value="0">Offer Letter</option>
+                        <option value="1">Promotion Letter</option>
                     </select>
                 </div>
             <div class="mb-3">

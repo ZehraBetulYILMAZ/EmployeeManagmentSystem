@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KkrExADyy8rKK66IgY4V8BTMYWZMaBZqxx449cTcC9w=",
+  "Hash": "AtVlh3kfttkVqmTmIo6X9GxOE6wz715Eyq2IYZJ05Jk=",
   "Source": "EMS.WebUI",
   "BasePath": "_content/EMS.WebUI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EMS.WebUI\\wwwroot",
       "Source": "EMS.WebUI",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\css\\styles.css",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\css\\styles.css",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-pixabay-269077.jpg",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-pixabay-269077.jpg",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "img/pexels-pixabay-269077.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pexels-pixabay-269077.jpg"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-scott-webb-27406.jpg",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-scott-webb-27406.jpg",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "img/pexels-scott-webb-27406.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pexels-scott-webb-27406.jpg"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "img/pexels-sevenstorm-juhaszimrus-443383.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/employee.js",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\js\\employee.js"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\events.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\events.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/events.js",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\js\\events.js"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\login.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\login.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/login.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\newEmployee.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\newEmployee.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/newEmployee.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\js\\newEmployee.js"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\payroll.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\payroll.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/payroll.js",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\js\\payroll.js"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\profileDetails.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\profileDetails.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/profileDetails.js",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\js\\profileDetails.js"
     },
     {
-      "Identity": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEmployee.js",
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEmployee.js",
       "SourceId": "EMS.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\managment\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
       "BasePath": "_content/EMS.WebUI",
       "RelativePath": "js/viewEmployee.js",
       "AssetKind": "All",

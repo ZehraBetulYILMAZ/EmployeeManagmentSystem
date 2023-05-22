@@ -753,24 +753,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\redli\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gbh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\managment\\EmployeeManagmentSystem\\EMS.business\\EMS.business.csproj",
+      "projectUniqueName": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.business\\EMS.business.csproj",
       "projectName": "EMS.business",
-      "projectPath": "D:\\managment\\EmployeeManagmentSystem\\EMS.business\\EMS.business.csproj",
-      "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
-      "outputPath": "D:\\managment\\EmployeeManagmentSystem\\EMS.business\\obj\\",
+      "projectPath": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.business\\EMS.business.csproj",
+      "packagesPath": "C:\\Users\\gbh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.business\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\gbh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -784,11 +779,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\managment\\EmployeeManagmentSystem\\EMS.data\\EMS.data.csproj": {
-              "projectPath": "D:\\managment\\EmployeeManagmentSystem\\EMS.data\\EMS.data.csproj"
+            "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.data\\EMS.data.csproj": {
+              "projectPath": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.data\\EMS.data.csproj"
             },
-            "D:\\managment\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj": {
-              "projectPath": "D:\\managment\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj"
+            "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj": {
+              "projectPath": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS.entity\\EMS.entity.csproj"
             }
           }
         }
@@ -813,26 +808,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

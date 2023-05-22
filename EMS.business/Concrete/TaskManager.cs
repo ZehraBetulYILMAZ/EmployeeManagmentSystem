@@ -24,23 +24,29 @@ namespace EMS.business.Concrete
 
         public void Delete(TaskEmployee entity)
         {
-            throw new NotImplementedException();
+             _taskRepository.Delete(entity);
         }
 
         public List<TaskEmployee> GetAll()
         {
-            throw new NotImplementedException();
+            return _taskRepository.GetAll();
         }
 
         public TaskEmployee GetById(int id)
         {
-            throw new NotImplementedException();
+            return _taskRepository.GetById(id);
+        }
+
+        public List<TaskEmployee> GetTasksWithEmployee(int EmployeeId)
+        { 
+            return _taskRepository.GetTasksWithEmployee(EmployeeId);
         }
 
         public void Update(TaskEmployee entity)
         {
-            throw new NotImplementedException();
+           _taskRepository.Update(entity);
         }
+       
     }
 }
 

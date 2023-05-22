@@ -9,77 +9,81 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EMS.WebUI
 build_property.RootNamespace = EMS.WebUI
-build_property.ProjectDir = D:\managment\EmployeeManagmentSystem\EMS\
+build_property.ProjectDir = C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\managment\EmployeeManagmentSystem\EMS
+build_property.MSBuildProjectDirectory = C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Account/Login.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/AssignTask.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/AssignTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXNzaWduVGFzay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/CreateEvent.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/CreateEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/CreatePayroll.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/CreatePayroll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUGF5cm9sbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/Index.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/NewEmployee.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/NewEmployee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTmV3RW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/UploadLetter.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/UploadLetter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBsb2FkTGV0dGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/ViewEmployees.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/ViewEmployees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0VtcGxveWVlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Admin/ViewEvent.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/ViewEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0V2ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Employee/EmployeeViewEvent.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Employee/EmployeeViewEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVWaWV3RXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Employee/Index.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Employee/ProfileDetails.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Employee/ProfileDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUHJvZmlsZURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Employee/ViewTask.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Employee/TaskStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcVGFza1N0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Employee/ViewTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcVmlld1Rhc2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Home/Index.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/Shared/_Layout.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/_ViewImports.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/managment/EmployeeManagmentSystem/EMS/Views/_ViewStart.cshtml]
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
