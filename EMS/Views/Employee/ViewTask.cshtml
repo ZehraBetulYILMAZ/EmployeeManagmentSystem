@@ -25,12 +25,13 @@
                                 <option value="2">appointed</option>
                             </select>
                         </div>*@
+                        <form asp-action="TaskStatus" asp-controller= "employee"method="post">
                         <div class="row">
                             <div class="col-10">@item.dateOfPosting</div>
-                              @*  <input type="hidden" name="Id" value="@item.Id">*@
-                                <div class="col-2"> <a href="/Employee/TaskStatus/@item.Id"> <button type="button" class="btn btn-dark">Submit</button></a></div>
+                               <input type="hidden" name="Id" value="@item.Id">
+                                <div class="col-2">  <button type="submit" class="btn btn-dark">Submit</button>
                         </div>
-                   
+                        </form>
                 </div>
             </div>
             }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using System.Diagnostics;
 
+
 namespace EMS.WebUI.Controllers
 {
     [Authorize]
@@ -16,15 +17,109 @@ namespace EMS.WebUI.Controllers
         private IEmployeeService employeeService;
         private IActivityService activityService;
         private IPayrollService payrollService;
-        public AdminController(IEmployeeService employeeService, IActivityService activityService, UserManager<User> userManager, IPayrollService payrollService)
+        private RoleManager<IdentityRole> roleManager;
+        private ITaskService taskService;
+        public AdminController(IEmployeeService employeeService, IActivityService activityService, UserManager<User> userManager, IPayrollService payrollService, RoleManager<IdentityRole> roleManager, ITaskService taskService)
         {
             this.employeeService = employeeService;
             this.activityService = activityService;
             this._userManager = userManager;
             this.payrollService = payrollService;
+            this.roleManager = roleManager;
+            this.taskService = taskService;
         }
-        
-        
+
+        public async Task<IActionResult> RoleEdit(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+
+            var members = new List<User>();
+            var nonmembers = new List<User>();
+
+            foreach (var user in _userManager.Users)
+            {
+                var list = await _userManager.IsInRoleAsync(user, role.Name)
+                                ? members : nonmembers;
+                list.Add(user);
+            }
+            var model = new RoleDetails()
+            {
+                Role = role,
+                Members = members,
+                NonMembers = nonmembers
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> RoleEdit(RoleEditModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach (var userId in model.IdsToAdd ?? new string[] { })
+                {
+                    var user = await _userManager.FindByIdAsync(userId);
+                    if (user != null)
+                    {
+                        var result = await _userManager.AddToRoleAsync(user, model.RoleName);
+                        if (!result.Succeeded)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                ModelState.AddModelError("", error.Description);
+                            }
+                        }
+                    }
+                }
+
+                foreach (var userId in model.IdsToDelete ?? new string[] { })
+                {
+                    var user = await _userManager.FindByIdAsync(userId);
+                    if (user != null)
+                    {
+                        var result = await _userManager.RemoveFromRoleAsync(user, model.RoleName);
+                        if (!result.Succeeded)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                ModelState.AddModelError("", error.Description);
+                            }
+                        }
+                    }
+                }
+            }
+            return Redirect("/admin/role/" + model.RoleId);
+        }
+
+        public IActionResult RoleList()
+        {
+            return View(roleManager.Roles);
+        }
+        public IActionResult RoleCreate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RoleCreate(RoleModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await roleManager.CreateAsync(new IdentityRole(model.Name));
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("RoleList");
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
+            }
+            return View(model);
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -103,8 +198,12 @@ namespace EMS.WebUI.Controllers
             var result = await _userManager.CreateAsync(user, "N8hZ4V9#%g0u");
             if (result.Succeeded)
             {
-                // generate token
-                // email
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                var url = Url.Action("ConfirmEmail", "Account", new
+                {
+                    userId = user.Id,
+                    token = code
+                });
                 return RedirectToAction("Login", "Account");
             }
             return View();
@@ -125,7 +224,6 @@ namespace EMS.WebUI.Controllers
                 activityModel.eventName = item.title;
                 activityModel.info = item.description;
                 activityModel.eventDate = item.dateOfPosting;
-                // activityModel.isActive= item.isActive;
                 models.Add(activityModel);
             }
             return View(models);
@@ -148,15 +246,29 @@ namespace EMS.WebUI.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult AssignTask(TaskModel model)
+        {
+            TaskEmployee task = new TaskEmployee();
+            task.dateOfPosting = DateTime.Now;
+            task.description = model.description;
+            task.name =model.name;
+            task.EmployeeId = model.EmployeeId;
+            task.isActive = true;
+            task.dateOfHanding = model.dateOfHanding;
+            task.status = "not";
+            taskService.Create(task);
+            return View();
+        }
         public IActionResult UploadLetter()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult UploadLetter(IFormFile file)
+        public IActionResult UploadLetter(IFormFile file,string idNumber)
         {
-            string idNumer = "1100110011";
-            var entity = employeeService.GetIdNumber(idNumer);
+            //string idNumer = "1100110011";
+            var entity = employeeService.GetIdNumber(idNumber);
 
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AtVlh3kfttkVqmTmIo6X9GxOE6wz715Eyq2IYZJ05Jk=",
+  "Hash": "1GxqN9QPJZbynfN7oA1PU3ABrLacVpqrnXC5WYo1d/o=",
   "Source": "EMS.WebUI",
   "BasePath": "_content/EMS.WebUI",
   "Mode": "Default",
@@ -32,6 +32,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\files\\45c62b0c-3300-4ef7-8151-318d3d42d41c.pdf",
+      "SourceId": "EMS.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "BasePath": "_content/EMS.WebUI",
+      "RelativePath": "files/45c62b0c-3300-4ef7-8151-318d3d42d41c.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\45c62b0c-3300-4ef7-8151-318d3d42d41c.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\files\\79351215-e327-4239-993f-da48e3594a84.pdf",
+      "SourceId": "EMS.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\",
+      "BasePath": "_content/EMS.WebUI",
+      "RelativePath": "files/79351215-e327-4239-993f-da48e3594a84.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\79351215-e327-4239-993f-da48e3594a84.pdf"
     },
     {
       "Identity": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-pixabay-269077.jpg",

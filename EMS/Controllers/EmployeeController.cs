@@ -15,7 +15,6 @@ namespace EMS.WebUI.Controllers
             this.employeeService = employeeService;
             this.taskService = taskService;
 
-
         }
         public IActionResult Index()
         {
@@ -61,21 +60,7 @@ namespace EMS.WebUI.Controllers
 
             return View(models);
         }
-        public IActionResult TaskStatus(int id)
-        {
-            var task = taskService.GetById(id);
-            TaskModel model = new TaskModel() {
-                
-            name= task.name,
-            description= task.description,  
-            Id=task.Id,
-            dateOfPosting=task.dateOfPosting,   
-            EmployeeId=task.EmployeeId, 
-            };
-
-            return View(model);
-            
-        }
+     
         [HttpPost]
         public IActionResult TaskStatus(TaskModel model)
         {
@@ -84,8 +69,9 @@ namespace EMS.WebUI.Controllers
             if (model.status != null)
             {
                 task.status = model.status;
+                taskService.Update(task);
             }
-            taskService.Update(task);
+           
 
 
             return View(model);

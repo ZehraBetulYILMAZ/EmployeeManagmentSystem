@@ -19,7 +19,7 @@ namespace EMS.business.Concrete
 
         public void Create(TaskEmployee entity)
         {
-            throw new NotImplementedException();
+            _taskRepository.Create(entity);
         }
 
         public void Delete(TaskEmployee entity)

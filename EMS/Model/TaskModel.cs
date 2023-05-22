@@ -13,6 +13,9 @@ namespace EMS.WebUI.Model
         public bool isActive { get; set; }
 
         public int EmployeeId { get; set; }
+        public string employee { get; set; }
+
+        public DateTime dateOfHanding { get; set; }
 
 
     }

@@ -53,7 +53,7 @@ namespace EMS.business.Concrete
 
         public void Update(Employee entity)
         {
-            _employeeRepository.Create(entity); ;
+            _employeeRepository.Update(entity); ;
         }
         public Employee GetIdNumber(string idNumber)
         {

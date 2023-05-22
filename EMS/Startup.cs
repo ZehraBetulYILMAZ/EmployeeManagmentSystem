@@ -99,8 +99,21 @@ namespace EMS.WebUI
                 endpoints.MapControllerRoute(
                     name: "employeeviewtask",
                     pattern: "employee/viewtask/{id?}",
-                    defaults: new { controller = "Employee", action = "ViewTask" }
-                );
+                    defaults: new { controller = "Employee", action = "ViewTask" });
+                endpoints.MapControllerRoute(
+                  name: "adminroles",
+                  pattern: "admin/role/list",
+                  defaults: new { controller = "Admin", action = "RoleList" });
+                endpoints.MapControllerRoute(
+                    name: "adminrolecreate",
+                    pattern: "admin/role/create",
+                    defaults: new { controller = "Admin", action = "RoleCreate" });
+                endpoints.MapControllerRoute(
+                    name: "adminroleedit",
+                    pattern: "admin/role/{id?}",
+                    defaults: new { controller = "Admin", action = "RoleEdit" }
+            
+                    );
 
             });
          
