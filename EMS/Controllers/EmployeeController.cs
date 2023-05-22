@@ -16,6 +16,14 @@ namespace EMS.WebUI.Controllers
         {
             return View();
         }
+        public IActionResult ViewTask()
+        {
+            return View();
+        }
+        public IActionResult EmployeeViewEvent()
+        {
+            return View();
+        }
         public IActionResult ProfileDetails()
         {
             Employee employee = employeeService.GetIdNumber("12321312345");

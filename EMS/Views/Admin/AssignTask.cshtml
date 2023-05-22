@@ -1,5 +1,47 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+<section class="mt-5 ">
+    <div class="col-8 container ">
+        <h2 class="mb-2 text-center">ASSIGN TASK</h2>
+        <div class="card">
+            <div class="card-body">
+                <form asp-controller="Admin" asp-action="NewEmployee" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="name" class="form-label  d-flex">Title</label>
+                                <input type="text" name="name" id="name" class="form-control form-control-sm d-flex">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="dateOfHanding" class="form-label  d-flex">Date Of Handing</label>
+                                <input type="date" id="dateOfHanding" class="w-75" name="dateOfHanding" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Employee" class="form-label  d-flex">Employee</label>
+                        <input type="text" name="employeeID" id="Employee" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label  d-flex">Description</label>
+                        <textarea name="description" id="description" class="form-control form-control-lg"></textarea>
+                    </div>
+
+                    @* <div class="mb-3">
+                    <label for="status" class="form-label  d-flex">Status</label>
+                    <select name="status" id="status" class="form-select">
+                    <option value="0">done</option>
+                    <option value="1">in progress</option>
+                    <option value="2">appointed</option>
+                    </select>
+                    </div>*@
+
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section> 

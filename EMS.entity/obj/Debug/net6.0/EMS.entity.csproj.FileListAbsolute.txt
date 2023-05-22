@@ -46,3 +46,15 @@ C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS.entity\obj\Deb
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\refint\EMS.entity.dll
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.pdb
 C:\Users\gbh\source\repos\zehrakübra\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\ref\EMS.entity.dll
+D:\managment\EmployeeManagmentSystem\EMS.entity\bin\Debug\net6.0\EMS.entity.deps.json
+D:\managment\EmployeeManagmentSystem\EMS.entity\bin\Debug\net6.0\EMS.entity.dll
+D:\managment\EmployeeManagmentSystem\EMS.entity\bin\Debug\net6.0\EMS.entity.pdb
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.csproj.AssemblyReference.cache
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.AssemblyInfoInputs.cache
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.AssemblyInfo.cs
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.csproj.CoreCompileInputs.cache
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.dll
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\refint\EMS.entity.dll
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\EMS.entity.pdb
+D:\managment\EmployeeManagmentSystem\EMS.entity\obj\Debug\net6.0\ref\EMS.entity.dll

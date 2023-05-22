@@ -144,6 +144,37 @@ namespace EMS.WebUI.Controllers
             activityService.Create(activity);
             return View();
         }
+        public IActionResult AssignTask()
+        {
+            return View();
+        }
+        public IActionResult UploadLetter()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult UploadLetter(IFormFile file)
+        {
+            string idNumer = "1100110011";
+            var entity = employeeService.GetIdNumber(idNumer);
 
+
+
+            if (file != null)
+            {
+                var extention = Path.GetExtension(file.FileName);
+                var randomName = string.Format($"{Guid.NewGuid()}{extention}");
+                entity.offerLetterPath = randomName;
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\files", randomName);
+
+                var stream = new FileStream(path, FileMode.Create);
+
+                file.CopyTo(stream);
+            }
+            employeeService.Update(entity);
+
+
+            return View();
+        }
     }
 }
