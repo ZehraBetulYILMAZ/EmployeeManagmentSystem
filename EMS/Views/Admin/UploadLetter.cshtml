@@ -1,5 +1,30 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+<section class="mt-2 ">
+    <h1 class="header">Upload Letter</h1>
+    <div class="container text-center">
+    
+     <div class="col-6 container ">
+         <form enctype="multipart/form-data" asp-controller="Admin" asp-action="UploadLetter" method="post">
+          <div class="mb-3" >
+              <label for="idNumber" class="form-label  d-flex">Id Number</label>
+                    <input type="text" name="idNumber" id="idNumber" class="form-control">
+          </div>
+                <div class="mb-3">
+                    <label for="fileType" class="form-label  d-flex">Type</label>
+                    <select name="fileType" id="fileType" class="form-select">
+                        <option value="0">done</option>
+                        <option value="1">in progress</option>
+                    </select>
+                </div>
+            <div class="mb-3">
+                    <label for="offer-letter" class="form-label  d-flex">File Upload</label>
+                    <input type="file" name="file" accept=".pdf" id="file" class="form-control ">
+            </div>
+               
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </div>
+</section>
+
+
