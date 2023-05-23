@@ -35,6 +35,11 @@ namespace EMS.business.Concrete
             _activityRepository.Create(entity);
         }
 
+        public List<Activity> GetActivityWithEmployee(Employee e)
+        {
+           return _activityRepository.GetActivityWithEmployee(e);
+        }
+
         public List<Activity> GetAll()
         {
             return _activityRepository.GetAll();
@@ -51,5 +56,9 @@ namespace EMS.business.Concrete
         {
             _activityRepository.Create(entity); ;
         }
-}
+        public void UpdateAttandes(Employee entity, Activity activity)
+        {
+            _activityRepository.UpdateAttandes(entity, activity);
+        }
+    }
 }

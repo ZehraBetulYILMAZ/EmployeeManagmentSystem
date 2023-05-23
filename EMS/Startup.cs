@@ -41,18 +41,9 @@ namespace EMS.WebUI
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             });
-
-            services.ConfigureApplicationCookie(options => {
-                options.LoginPath = "/admin/index";
-                options.LogoutPath = "/account/logout";
-                options.AccessDeniedPath = "/account/accessdenied";
-                options.SlidingExpiration = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-                options.Cookie = new CookieBuilder
-                {
-                    HttpOnly = true,
-                    Name = ".EMS.Security.Cookie"
-                };
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             services.AddScoped<IEmployeeRepository,EfCoreEmployeeRepository>(); 
             services.AddScoped<IEmployeeService,EmployeeManager>(); 
@@ -83,8 +74,8 @@ namespace EMS.WebUI
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseRouting();
-
             app.UseAuthorization();
+            app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {

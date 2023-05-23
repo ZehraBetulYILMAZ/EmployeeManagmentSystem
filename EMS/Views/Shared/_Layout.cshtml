@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="/home/index">EMS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,33 +24,70 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/admin/CreateEvent">Create Event</a></li>
-                            <li><a class="dropdown-item" href="/admin/CreatePayroll">Create Payroll</a></li>
-                            <li><a class="dropdown-item" href="/admin/NewEmployee">New Employee</a></li>
-                            <li><a class="dropdown-item" href="/admin/ViewEmployees">View Employees</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
 
+                            @if (User.IsInRole("admin"))
+                            {
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/admin/CreateEvent">Create Event</a></li>
+                                    <li><a class="dropdown-item" href="/admin/CreatePayroll">Create Payroll</a></li>
+                                    <li><a class="dropdown-item" href="/admin/NewEmployee">New Employee</a></li>
+                                    <li><a class="dropdown-item" href="/admin/ViewEmployees">View Employees</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="/admin/index">Something else here</a></li>
+                                </ul>
+                            }
+                            else if (User.IsInRole("employee"))
+                            {
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/employee/ProfileDetails">Profile</a></li>
+                                    <li><a class="dropdown-item" href="/employee/ViewTask">Tasks</a></li>
+                                    @*<li><a class="dropdown-item" href="/employee/TaskStatus"></a></li>*@
+                                    <li><a class="dropdown-item" href="/employee/EmployeeViewEvent">View Event</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="/employee/index">Something else here</a></li>
+                                </ul>
+                            }
+                        </li>
+
+                    }
                 </ul>
+
                 <ul class="navbar-nav  d-flex">
                     <li class="nav-item">
                         <a class="nav-link" href="/account/login">login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/account/login">logout</a>
+                        <a class="nav-link" href="/account/logout">logout</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     @RenderBody()
+    @if (@TempData["message"] != null)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-title">
+                        @{
+                 
+                        <h3>Message: @TempData["message"]</h3>
+                        TempData.Peek("message");
+                            
+                        }
+                    </h4>
+                </div>
+            </div>
+        </div>
+    }
+
     <script src="popper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
 </body>

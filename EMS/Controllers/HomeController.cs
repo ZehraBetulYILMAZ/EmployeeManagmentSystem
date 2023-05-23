@@ -19,23 +19,7 @@ namespace EMS.WebUI.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Index(string username, string password)
-        {
-            Employee employee1 = new Employee
-            {
-                identificationNumber = "111111122063",
-                name = username,
-                surname = password,
-            };
-           List<Employee> e = employeeService.GetSearchResult(username);
-            LoginModel loginModel = new LoginModel
-            {
-                username = username,
-                password = password,
-            };
-            return Redirect("/Admin/Index");
-        }
+    
 
 
     }

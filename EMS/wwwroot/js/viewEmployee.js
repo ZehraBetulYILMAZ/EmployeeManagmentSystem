@@ -1,91 +1,47 @@
-fetch('employee.json')
-  .then((response) => response.json())
-  .then((data) => {
-    let table = document.getElementById('employeeTable');
-
-    for (let employee of data.employees) {
-      let row = document.createElement('tr');
-      row.dataset.id = employee.id;
-
-      let firstNameCell = document.createElement('td');
-      firstNameCell.textContent = employee.firstName;
-      row.appendChild(firstNameCell);
-
-      let lastNameCell = document.createElement('td');
-      lastNameCell.textContent = employee.lastName;
-      row.appendChild(lastNameCell);
-
-      let netSalaryCell = document.createElement('td');
-      netSalaryCell.setAttribute('contenteditable', 'true');
-      netSalaryCell.textContent = employee.netSalary;
-      row.appendChild(netSalaryCell);
-
-      let assignedTaskCell = document.createElement('td');
-      assignedTaskCell.setAttribute('contenteditable', 'true');
-      assignedTaskCell.textContent =
-        employee.assignedTask || 'No task assigned';
-      row.appendChild(assignedTaskCell);
-
-      let actionCell = document.createElement('td');
-      let deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Delete';
-      deleteButton.dataset.id = employee.id;
-      deleteButton.classList.add('delete-button');
-      deleteButton.addEventListener('click', function () {
-        deleteEmployee(employee.id);
-      });
-      actionCell.appendChild(deleteButton);
-      row.appendChild(actionCell);
-
-      table.appendChild(row);
-
-      let actionDeleteCell = document.createElement('td');
-      let viewButton = document.createElement('button');
-      viewButton.textContent = 'View';
-      viewButton.dataset.id = employee.id;
-      viewButton.classList.add('view-button');
-      viewButton.addEventListener('click', function () {
-        viewEmployee(employee.id);
-      });
-      actionCell.appendChild(viewButton);
-      row.appendChild(actionDeleteCell);
-
-      table.appendChild(row);
-    }
-  })
-  .catch((error) => console.error(error));
-
-function deleteEmployee(id) {
-  if (confirm('Are you sure you want to delete this employee?')) {
-    let table = document.getElementById('employeeTable');
-    let row = document.querySelector(`tr[data-id="${id}"]`);
-
-    if (row) {
-      table.removeChild(row);
-      console.log('Employee with ID ' + id + ' has been deleted.');
-    } else {
-      console.log('Employee not found.');
-    }
-  }
-}
-
-function viewEmployee(id) {
+document.addEventListener('DOMContentLoaded', function () {
   fetch('employee.json')
     .then((response) => response.json())
     .then((data) => {
-      let employee = data.employees.find((emp) => emp.id === id);
+      const employeeList = document.getElementById('employee-list');
 
-      if (employee) {
-        alert(`
-          Employee ID: ${employee.id}
-          First Name: ${employee.firstName}
-          Last Name: ${employee.lastName}
-          Net Salary: ${employee.netSalary}
-          Assigned Task: ${employee.assignedTask || 'No task assigned'}
-        `);
-      } else {
-        console.log('Employee not found.');
-      }
+      data.employees.forEach((employee) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${employee.firstName}</td>
+          <td>${employee.lastName}</td>
+          <td>${employee.gender}</td>
+          <td>${employee.birthday}</td>
+          <td>${employee.address}</td>
+          <td>${employee.department}</td>
+          <td>${employee.netSalary}</td>
+          <td>${employee.assignedTask}</td>
+          <td>${employee.taskStatus}</td>
+          <td class="action-buttons">
+          <button class="delete-button" data-id="${employee.id}">Delete</button>
+          </td>
+        `;
+
+        employeeList.appendChild(row);
+      });
+
+      // Delete button event listener
+      const deleteButtons = document.querySelectorAll('.delete-button');
+      deleteButtons.forEach((button) => {
+        button.addEventListener('click', deleteEmployee);
+      });
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+      console.log('Error fetching employee data:', error);
+    });
+});
+
+function deleteEmployee(event) {
+  const confirmDelete = confirm(
+    'Are you sure you want to delete this employee?'
+  );
+  if (confirmDelete) {
+    const button = event.target;
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+  }
 }

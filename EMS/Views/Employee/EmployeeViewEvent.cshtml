@@ -1,4 +1,5 @@
-﻿<section class="mt-5 container viewevent">
+﻿@model List<ActivityModel>
+<section class="mt-5 container viewevent">
 
     <div class="row">
         <div class="col-3 ">
@@ -6,60 +7,33 @@
             <img src="../img/pexels-pixabay-269077.jpg" class="img" alt="...">
 
         </div>
+
+
         <div class="col-9">
+            @foreach (var item in @Model)
+            {
             <div class="card text-center m-2">
                 <div class="card-header">
-                    Featured
+                    Event @item.type
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">@item.eventName</h5>
+                    <p class="card-text">@item.info</p>
+                    <form asp-action="EmployeeViewEvent" asp-controller="Employee" method="post">
+                            <input type="hidden" name="EmployeeId" id="Employee" class="form-control">
+                            <input type="hidden" name="Id" id="ID" class="form-control">
+                            <input type="checkbox" name="isAttandend" id="isAttandend" class="form-check-input">
+                            <label for="isAttandend" class="form-check-label  d-flex">Attandend</label>
+                            <button type="submit" class="btn btn-primary w-100">Save</button>
+                    </form>
                 </div>
                 <div class="card-footer text-body-secondary">
-                    2 days ago
+                   @item.eventDate.ToString();
                 </div>
             </div>
 
-            <div class="card text-center m-2">
-                <div class="card-header">
-                    Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
-                </div>
-            </div>
-            <div class="card text-center m-2">
-                <div class="card-header">
-                    Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
-                </div>
-            </div>
-            <div class="card text-center m-2">
-                <div class="card-header">
-                    Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                <div class="card-footer text-body-secondary">
-                    2 days ago
-                </div>
-            </div>
-       
+          }
+
+
     </div>
 </section>

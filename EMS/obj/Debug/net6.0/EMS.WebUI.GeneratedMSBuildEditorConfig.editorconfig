@@ -40,18 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTmV3RW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/RoleCreate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZUNyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/RoleEdit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZUVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/RoleList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZUxpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/UploadLetter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBsb2FkTGV0dGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/ViewEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0V2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Admin/ViewLetters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0xldHRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Employee/EmployeeViewEvent.cshtml]
@@ -90,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/Shared/_ResultMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXN1bHRNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gbh/source/repos/zehrakübra/EmployeeManagmentSystem/EMS/Views/_ViewImports.cshtml]

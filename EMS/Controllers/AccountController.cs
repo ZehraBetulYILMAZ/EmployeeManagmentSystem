@@ -14,35 +14,36 @@ namespace EMS.WebUI.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        public IActionResult Login()
+
+        public IActionResult Login(string ReturnUrl)
         {
-           /* return View(new LoginModel()
+            return View(new LoginModel()
             {
-               // ReturnUrl = ReturnUrl
-            });*/
-           return View();
+                ReturnUrl = ReturnUrl
+            });
         }
         [HttpPost]
+
         public async Task<IActionResult> Login(LoginModel model)
         {
 
-
-            // var user = await _userManager.FindByNameAsync(model.UserName);
             var user = await _userManager.FindByEmailAsync(model.username);
 
             if (user == null)
             {
-                return View();
+                ModelState.AddModelError("", "Bu kullanıcı adı ile daha önce hesap oluşturulmamış");
+                return View(model);
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, model.password, false, false);
 
             if (result.Succeeded)
             {
-                return Redirect("/admin/index");
+                return Redirect(model.ReturnUrl ?? "~/");
             }
 
-            return View();
+
+            return View(model);
         }
         public async Task<IActionResult> Logout()
         {

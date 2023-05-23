@@ -20,7 +20,19 @@
                         <tr>
                             <td>@item.firstName @item.lastName</td>
                             <td>@item.birthDate</td>
-                            <td>@item.gender</td>
+                            <td>
+                                @if (item.gender == true)
+                                {
+                                    <span>Female</span>
+
+
+
+                                }
+                                else
+                                {
+                                    <span>Male</span>
+                                }
+                            </td>
                             <td>@item.address</td>
                             <td>@item.department</td>
 

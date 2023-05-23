@@ -14,5 +14,7 @@ namespace EMS.business.Abstract
         void Create(Activity entity);
         void Update(Activity entity);
         void Delete(Activity entity);
+        void UpdateAttandes(Employee entity, Activity activity);
+        List<Activity> GetActivityWithEmployee(Employee e);
     }
 }

@@ -13,6 +13,42 @@
       "PackagePath": "staticwebassets\\files\\79351215-e327-4239-993f-da48e3594a84.pdf"
     },
     {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\bg2.png",
+      "PackagePath": "staticwebassets\\img\\bg2.png"
+    },
+    {
       "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-pixabay-269077.jpg",
       "PackagePath": "staticwebassets\\img\\pexels-pixabay-269077.jpg"
     },
@@ -23,6 +59,10 @@
     {
       "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg",
       "PackagePath": "staticwebassets\\img\\pexels-sevenstorm-juhaszimrus-443383.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\assignTask.js",
+      "PackagePath": "staticwebassets\\js\\assignTask.js"
     },
     {
       "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\employee.js",
@@ -49,8 +89,16 @@
       "PackagePath": "staticwebassets\\js\\profileDetails.js"
     },
     {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\uploadLetter.js",
+      "PackagePath": "staticwebassets\\js\\uploadLetter.js"
+    },
+    {
       "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEmployee.js",
       "PackagePath": "staticwebassets\\js\\viewEmployee.js"
+    },
+    {
+      "Id": "C:\\Users\\gbh\\source\\repos\\zehrakübra\\EmployeeManagmentSystem\\EMS\\wwwroot\\js\\viewEvents.js",
+      "PackagePath": "staticwebassets\\js\\viewEvents.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EMS.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -10,7 +10,7 @@ using System.Diagnostics;
 
 namespace EMS.WebUI.Controllers
 {
-    [Authorize]
+    [Authorize (Roles ="admin")] 
     public class AdminController : Controller
     {
         private UserManager<User> _userManager;
@@ -27,97 +27,6 @@ namespace EMS.WebUI.Controllers
             this.payrollService = payrollService;
             this.roleManager = roleManager;
             this.taskService = taskService;
-        }
-
-        public async Task<IActionResult> RoleEdit(string id)
-        {
-            var role = await roleManager.FindByIdAsync(id);
-
-            var members = new List<User>();
-            var nonmembers = new List<User>();
-
-            foreach (var user in _userManager.Users)
-            {
-                var list = await _userManager.IsInRoleAsync(user, role.Name)
-                                ? members : nonmembers;
-                list.Add(user);
-            }
-            var model = new RoleDetails()
-            {
-                Role = role,
-                Members = members,
-                NonMembers = nonmembers
-            };
-            return View(model);
-        }
-        [HttpPost]
-        public async Task<IActionResult> RoleEdit(RoleEditModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                foreach (var userId in model.IdsToAdd ?? new string[] { })
-                {
-                    var user = await _userManager.FindByIdAsync(userId);
-                    if (user != null)
-                    {
-                        var result = await _userManager.AddToRoleAsync(user, model.RoleName);
-                        if (!result.Succeeded)
-                        {
-                            foreach (var error in result.Errors)
-                            {
-                                ModelState.AddModelError("", error.Description);
-                            }
-                        }
-                    }
-                }
-
-                foreach (var userId in model.IdsToDelete ?? new string[] { })
-                {
-                    var user = await _userManager.FindByIdAsync(userId);
-                    if (user != null)
-                    {
-                        var result = await _userManager.RemoveFromRoleAsync(user, model.RoleName);
-                        if (!result.Succeeded)
-                        {
-                            foreach (var error in result.Errors)
-                            {
-                                ModelState.AddModelError("", error.Description);
-                            }
-                        }
-                    }
-                }
-            }
-            return Redirect("/admin/role/" + model.RoleId);
-        }
-
-        public IActionResult RoleList()
-        {
-            return View(roleManager.Roles);
-        }
-        public IActionResult RoleCreate()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> RoleCreate(RoleModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = await roleManager.CreateAsync(new IdentityRole(model.Name));
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("RoleList");
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
-                }
-            }
-            return View(model);
         }
 
         public IActionResult Index()
@@ -167,12 +76,16 @@ namespace EMS.WebUI.Controllers
           List<EmployeeModel> models = new List<EmployeeModel>();
             foreach (var item in employees)
             {
-              EmployeeModel employeeModel = new EmployeeModel();
+                var d = (DepartmentEnum)item.DepartmentId;
+                bool e =(bool)item.gender;
+                EmployeeModel employeeModel = new EmployeeModel();
                 employeeModel.idNumber = item.identificationNumber;
                 employeeModel.firstName = item.name;
                 employeeModel.lastName = item.surname;
                 employeeModel.birthDate = item.birthday;
                 employeeModel.address = item.adress;
+                employeeModel.department = d.ToString();
+                employeeModel.gender = e;
                 models.Add(employeeModel);
             }
             return View(models);
@@ -180,6 +93,10 @@ namespace EMS.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> NewEmployee(EmployeeModel e)
         {
+
+            int dId = int.Parse(e.department);
+
+
             Employee employee = new Employee()
             {
                 identificationNumber = e.idNumber,
@@ -188,6 +105,8 @@ namespace EMS.WebUI.Controllers
                 birthday = e.birthDate,
                 adress = e.address
             };
+            employee.gender = e.gender;
+            employee.DepartmentId = dId;
             employeeService.Create(employee);
             var user = new User()
             {
@@ -204,12 +123,15 @@ namespace EMS.WebUI.Controllers
                     userId = user.Id,
                     token = code
                 });
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Account");   
             }
+           
+
             return View();
         }
         public IActionResult NewEmployee()
         {
+            
             return View();
         }
 
@@ -240,7 +162,10 @@ namespace EMS.WebUI.Controllers
                 dateOfPosting = a.eventDate,
             };
             activityService.Create(activity);
+            TempData["messsage"] = "success";
+           
             return View();
+
         }
         public IActionResult AssignTask()
         {
@@ -288,5 +213,30 @@ namespace EMS.WebUI.Controllers
 
             return View();
         }
+
+        public IActionResult ViewLetters()
+        {
+            var employees = employeeService.GetAll();
+            var models = new List<EmployeeModel>();
+            if (employees != null)
+            {
+                foreach (var employee in employees)
+                {
+                    EmployeeModel model = new EmployeeModel()
+                    {
+                        firstName = employee.name,
+                        lastName = employee.name,
+                        promotionLetterPath = employee.promotionLetterPath,
+                        offerLetterPath = employee.offerLetterPath,
+
+                    };
+                    models.Add(model);
+                }
+
+            }
+            return View(models);
+        }
     }
 }
+
+

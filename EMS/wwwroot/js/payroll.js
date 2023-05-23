@@ -49,13 +49,9 @@ function addPayroll() {
 }
 
 function deletePayroll(button) {
-  var row = button.parentNode.parentNode;
-  var table = row.parentNode;
-  table.deleteRow(row.rowIndex);
-}
-
-function deletePayroll(button) {
-  var row = button.parentNode.parentNode;
-  var table = row.parentNode;
-  table.deleteRow(row.rowIndex);
+  if (confirm('Are you sure you want to delete?')) {
+    var row = button.parentNode.parentNode;
+    var table = row.parentNode;
+    table.deleteRow(row.rowIndex);
+  }
 }

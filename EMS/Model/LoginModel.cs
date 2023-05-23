@@ -9,6 +9,6 @@ namespace EMS.WebUI.Model
             [Required]
            // [DataType(DataType.Password)]
             public string password { get; set; }
-           // public string ReturnUrl { get; set; }
+            public string ReturnUrl { get; set; }
         }
 }

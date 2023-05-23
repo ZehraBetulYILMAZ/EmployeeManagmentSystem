@@ -1,0 +1,39 @@
+﻿@model List<EmployeeModel>
+<section class="mt-2 ">
+    <div class="container text-center">
+        <div class="col-9 container ">
+            <h1 class="header">Employee Management System - View Employees</h1>
+
+            <table class="table m-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Full Name</th>
+                        <th scope="col"> Offer Letter View </th>
+                        <th scope="col">Promotion Letter View</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @foreach (var item in @Model)
+                        {
+                            <tr>
+                                <td>@item.firstName @item.lastName</td>
+                                <td>
+                                    <a href="/files/d6ea9062-62a1-4566-90ed-293432a9af5e.pdf" class="btn btn-secondary stretched-link">View </a>
+                                </td>
+                                <td>
+
+                                    <a href="/files/b2602acf-ccfd-41ed-8a5e-08f6c225dafb.pdf" class="btn btn-secondary stretched-link">View </a>
+
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

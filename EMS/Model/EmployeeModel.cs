@@ -12,7 +12,9 @@ namespace EMS.WebUI.Model
 
         public string? department { get; set; }
 
-        public string? gender { get; set; }
+        public bool? gender { get; set; }
+        public string? offerLetterPath { get; set; }
+        public string? promotionLetterPath { get; set; }
 
 
 

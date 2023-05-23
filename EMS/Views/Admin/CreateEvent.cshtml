@@ -6,7 +6,7 @@
             <div class="card-body ">
                 <h5 class="card-title">Create Event</h5>
 
-                <form asp-controller="Admin" asp-action="CreateEvent" method="post" class="m-10">
+                <form asp-controller="Admin" id ="eventForm" asp-action="CreateEvent" method="post" class="m-10">
                     <div class="form-group">
                         <label for="eventName">Title</label>
                         <input type="text" name="eventName" class="form-control" id="eventName">
@@ -27,7 +27,8 @@
                         <label for="eventInfo">Event Info:</label>
                         <textarea class="form-control" id="eventInfo" name="info"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary my-1">Create Event</button>
+                    <button type="submit" onclick="addEvent()" class="btn btn-primary my-1">Create Event</button>
+                    
                 </form>
 
             </div>
@@ -37,3 +38,5 @@
     </div>
 
 </section>
+
+<script src="~/js/events.js"></script>

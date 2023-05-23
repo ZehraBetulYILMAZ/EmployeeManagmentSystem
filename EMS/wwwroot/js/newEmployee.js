@@ -1,26 +1,39 @@
-var newEmployeeForm = document.getElementById('newEmployeeForm');
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('new-employee-form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Formun varsayılan gönderimini engelle
 
-newEmployeeForm.addEventListener('submit', function (event) {
-  event.preventDefault();
+    // Formdaki değerleri al
+    const identificationNumber = document.getElementById(
+      'identification-number'
+    ).value;
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const birthdate = document.getElementById('birthdate').value;
+    const address = document.getElementById('address').value;
+    const gender = document.getElementById('gender').value;
+    const department = document.getElementById('department').value;
+    const assignedTask = document.getElementById('assigned-task').value;
+    const netSalary = document.getElementById('net-salary').value;
 
-  var firstName = document.getElementById('firstName').value;
-  var lastName = document.getElementById('lastName').value;
-  var birthDate = document.getElementById('birthDate').value;
-  var identificationNumber = document.getElementById(
-    'identificationNumber'
-  ).value;
+    // İdentiification number 11 haneli değilse hata mesajı göster
+    if (identificationNumber.length !== 11) {
+      alert('Id number must be 11 digits.');
+      return;
+    }
 
-  // Perform necessary actions with the form data (e.g., save to database)
+    // Doğum tarihi kontrolü
+    const today = new Date();
+    const selectedDate = new Date(birthdate);
+    const age = today.getFullYear() - selectedDate.getFullYear();
 
-  // Reset the form
-  newEmployeeForm.reset();
+    if (age < 18) {
+      alert('Employee must be 18 or older.');
+      return;
+    }
 
-  alert(
-    'New employee added:\n\nFirst Name: ' +
-      firstName +
-      '\nLast Name: ' +
-      lastName +
-      '\nBirth Date: ' +
-      birthDate
-  );
+    // Tüm bilgiler doğru ise başarılı mesajını göster
+    alert('New Employee Successfully Added!');
+  });
+  form.reset();
 });
